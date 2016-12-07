@@ -41,6 +41,7 @@ void ChooseSplit(data exm_set[], int size, int &split, data &SplitChoice){
     /*compute the variance on every dimension. Set split as the dismension that have the biggest
      variance. Then choose the instance which is the median on this split dimension.*/
     /*compute variance on the x,y dimension. DX=EX^2-(EX)^2*/
+    //方差公式：平方的均值-均值的平方
     double tmp1,tmp2;
     tmp1 = tmp2 = 0;
     for (int i = 0; i < size; ++i)
@@ -211,6 +212,7 @@ void searchNearest(Tnode * Kd, data target, data &nearestpoint, double & distanc
         }
 
         else
+            search_path.pop();
 
         {
 
